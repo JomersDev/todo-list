@@ -1,10 +1,35 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Getting Started</title>
-    <script src="https://unpkg.com/lodash@4.17.20"></script>
+    <title>Todo List App</title>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
-    <script src="main.js"></script>
-  </body>
+    <div class="container">
+        <div class="header">
+            <h1>Todo List</h1>
+        </div>
+        <div class="user-input">
+            <h2>Add a Task</h2>
+            <form id="add-form">
+                <div>
+                    <input type="text" id="title" name="title" required placeholder="Task Title">
+                </div>
+                <div>
+                    <input type="text" id="description" name="description" required placeholder="More deatils?">
+                </div>
+                <div>
+                    <input type="number" id="duedate" name="dueDate" required placeholder="Due Date">
+                </div>
+                <div>
+                    <input type="submit" value="Submit" required>
+                </div>
+              </form>
+        </div>
+        <div class="tasks">
+
+        </div>
+    </div>
+</body>
 </html>
