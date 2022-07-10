@@ -11,24 +11,29 @@
             <h1>Todo List</h1>
         </div>
         <div class="user-input">
-            <h2>Add a Task</h2>
-            <form id="add-form">
-                <div>
-                    <input type="text" id="title" name="title" required placeholder="Task Title">
-                </div>
-                <div>
-                    <input type="text" id="description" name="description" required placeholder="More deatils?">
-                </div>
-                <div>
-                    <input type="number" id="duedate" name="dueDate" required placeholder="Due Date">
-                </div>
-                <div>
-                    <input type="submit" value="Submit" required>
-                </div>
-              </form>
+            <h2>All Tasks</h2>
         </div>
         <div class="tasks">
 
+        </div>
+        <div class="bg-modal">
+            <div class="modal-content">
+                <div class="close">+</div>
+                <form id="add-form">
+                    <div>
+                        <input type="text" id="title" name="title" required placeholder="Task: Gym">
+                    </div>
+                    <div>
+                        <input type="text" id="description" name="description" required placeholder="Detail: Upper Body Day">
+                    </div>
+                    <div>
+                        <input type="date" id="duedate" name="dueDate" required placeholder="Due Date">
+                    </div>
+                    <div>
+                        <input type="submit" value="Submit" required>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </body>

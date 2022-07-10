@@ -1,4 +1,4 @@
-import { displayTasksOnPage } from "./render-tasks";
+import { displayTasksOnPage } from "./dom-manipulation";
 
 //Array to store todo tasks
 export let taskStorage = [];
