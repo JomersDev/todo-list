@@ -1,7 +1,15 @@
 import { displayTasksOnPage } from "./dom-manipulation";
 
-//Array to store todo tasks
-export let taskStorage = [];
+//assigning local storage key
+const LOCAL_STORAGE_LIST_KEY = "task.list";
+
+//Storage array that checks localStorage on inital load or defaults to an empty array
+export let taskStorage = JSON.parse(localStorage.getItem(LOCAL_STORAGE_LIST_KEY)) || [];
+
+//function that saves the contents of the the current task list to localStorage
+export function save() {
+  localStorage.setItem(LOCAL_STORAGE_LIST_KEY, JSON.stringify(taskStorage));
+}
 
 //Class for todo tasks
 export class Task {

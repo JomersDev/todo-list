@@ -1,4 +1,4 @@
-import { taskStorage } from "./task-logic";
+import { save, taskStorage } from "./task-logic";
 
 //function to render the contents of the storage array to the page
 export function displayTasksOnPage() {
@@ -55,6 +55,7 @@ export function displayTasksOnPage() {
 
         card.firstChild.classList.add("task-title-card");
     })
+    save();
 }
 
 //function for closing the user input form

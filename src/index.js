@@ -1,9 +1,10 @@
 import { createTask } from "./task-logic.js";
-import { closeUserInput } from "./dom-manipulation.js";
+import { closeUserInput, displayTasksOnPage } from "./dom-manipulation.js";
 
 //Grabbing user inputs and assigning them to variables
 const addForm = document.forms["add-form"];
 
+//event listener for user input form that takes the value and and calls createTask funciton
 addForm.addEventListener('submit', function(e) {
     e.preventDefault();
     const taskTitle = addForm.querySelector('input[name="title"]').value;
@@ -13,8 +14,9 @@ addForm.addEventListener('submit', function(e) {
     closeUserInput();
 });
 
+//event listener for close button on user input form
 const closeUserInputBtn = document.querySelector('.close');
 closeUserInputBtn.addEventListener('click', closeUserInput);
 
-//default page opens with sample task below
-createTask("Gym", "Upper body day", "11/07/22");
+//calling this function initally as the "Add Task" button is tied to this function - refactor to remove this
+displayTasksOnPage();
